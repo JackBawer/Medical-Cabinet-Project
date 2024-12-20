@@ -1,2 +1,2 @@
 # Medical-Cabinet-Project
-The project is still empty waiting to be filled with our creative juices like a virgin on her period.
+Good news. Now we are ready to take the project down by building it up. I'll be your Fred, guys, because we'll be doing a little "Let's split up, gang!" in classic Scooby-Doo fashion. Get it done, guys to git it.
