@@ -1,6 +1,6 @@
 package model;
 
-public class Secretary extends Person{
+public class Secretary extends User{
 
 	public Secretary(String firstName, String lastName) {
 		super(firstName, lastName);
@@ -10,6 +10,4 @@ public class Secretary extends Person{
 	public String getDetails() {
 		return "Secretary: " + getFirstName() + " " + getLastName();
 	}
-	
-	
 }

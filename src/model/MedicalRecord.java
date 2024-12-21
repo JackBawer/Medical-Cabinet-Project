@@ -3,20 +3,22 @@ package model;
 import java.time.LocalDateTime;
 
 public class MedicalRecord extends Record{
-	private String observation;
+	private Observation observation;
 	public Prescription prescription;
+	public String history;
 	
-	public MedicalRecord(LocalDateTime dateTime, String observation, Prescription prescription) {
+	public MedicalRecord(LocalDateTime dateTime, Observation observation, Prescription prescription, String history) {
 		super(dateTime);
 		this.observation = observation;
 		this.prescription = prescription;
+		this.history = history;
 	}
 
-	public String getObservation() {
+	public Observation getObservation() {
 		return observation;
 	}
 
-	public void setObservation(String observation) {
+	public void setObservation(Observation observation) {
 		this.observation = observation;
 	}
 
@@ -28,8 +30,16 @@ public class MedicalRecord extends Record{
 		this.prescription = prescription;
 	}
 	
+	public String getHistory() {
+		return history;
+	}
+
+	public void setHistory(String history) {
+		this.history = history;
+	}
+
 	@Override
 	public String getRecordDetails() {
-		return "Date: " + getDateTime() + ", Observations: " + observation + ", Prescription: " + prescription;
+		return "Date: " + getDateTime() + ", Observations: " + observation + ", Prescription: " + prescription + ", History: " + history;
 	}
 }

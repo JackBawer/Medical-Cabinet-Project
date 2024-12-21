@@ -6,7 +6,6 @@ public abstract class Record {
 	private LocalDateTime dateTime;
 
 	public Record(LocalDateTime dateTime) {
-		super();
 		this.dateTime = dateTime;
 	}
 

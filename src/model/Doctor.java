@@ -1,6 +1,6 @@
 package model;
 
-public class Doctor extends Person {
+public class Doctor extends User {
 	private String specialization;
 
 	public Doctor(String firstName, String lastName, String specialization) {
