@@ -1,10 +1,9 @@
-package model;
+package module;
 
 public class Observation {
 	private String description;
-
+	
 	public Observation(String description) {
-		super();
 		this.description = description;
 	}
 

@@ -1,4 +1,4 @@
-package model;
+package module;
 
 public class Doctor extends User {
 	private String specialization;

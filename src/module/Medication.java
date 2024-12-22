@@ -1,37 +1,42 @@
-package model;
+package module;
 
-public class Prescription {
+public class Medication {
 	private String medicationName;
-	private String dosage;
-	private int duration; // in days
+	private int dosage;
+	private int duration;
 	
-	public Prescription(String medicationName, String dosage, int duration) {
+	public Medication(String medicationName, int dosage, int duration) {
 		this.medicationName = medicationName;
 		this.dosage = dosage;
 		this.duration = duration;
 	}
-	
+
 	public String getMedicationName() {
 		return medicationName;
 	}
-	public void setMedicationName(String medicationName) {
+
+	public void setName(String name) {
 		this.medicationName = medicationName;
 	}
-	public String getDosage() {
+
+	public int getDosage() {
 		return dosage;
 	}
-	public void setDosage(String dosage) {
+
+	public void setDosage(int dosage) {
 		this.dosage = dosage;
 	}
+
 	public int getDuration() {
 		return duration;
 	}
+
 	public void setDuration(int duration) {
 		this.duration = duration;
 	}
 	
 	@Override
 	public String toString() {
-		return medicationName + " (" + dosage + ") " + duration + " days";
+		return "Medication: " + getMedicationName() + ", Dosage: " + getDosage() + ", Duration: " + getDuration();
 	}
 }
