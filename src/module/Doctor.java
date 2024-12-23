@@ -2,7 +2,7 @@ package module;
 
 public class Doctor extends User {
 	private String specialization;
-
+	// private boolean occupied;
 	public Doctor(String firstName, String lastName, String specialization) {
 		super(firstName, lastName);
 		this.specialization = specialization;
