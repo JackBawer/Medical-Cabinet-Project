@@ -22,7 +22,6 @@ public class PatientFileService  {
 		this.patientFiles = patientFiles;
 	}
 
-
 	void addPatient(Patient patient) {
 		return;
 	}
