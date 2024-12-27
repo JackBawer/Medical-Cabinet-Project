@@ -26,7 +26,7 @@ public class MedicalRecordService {
 
     public MedicalRecord getMedicalRecord(String ID) {
         for (MedicalRecord record : medicalRecords) {
-            if (record.getPatient().getId() == ID) {
+            if (record.getPatient().getId().equals(ID)) {
                 return record;
             }
         }
@@ -36,7 +36,7 @@ public class MedicalRecordService {
 
     public void updateRecord(MedicalRecord medicalRecord) {
         for (MedicalRecord record : medicalRecords) {
-            if (record.getPatient().getId() == medicalRecord.getPatient().getId()) {
+            if (record.getPatient().getId().equals(medicalRecord.getPatient().getId())) {
                 record = medicalRecord;
                 return;
             }

@@ -24,7 +24,7 @@ public class Main {
 		System.out.println("""
 				1. Doctor
 				2. Secretary
-				3. ¨Patient
+				3. Patient
 				4. Exit
 				""");
 		// gonna think about how to implement the switch statement
