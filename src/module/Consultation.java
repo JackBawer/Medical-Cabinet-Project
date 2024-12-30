@@ -1,10 +1,7 @@
 package module;
 
-
-import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.List;
-import java.util.ArrayList;
+
 
 public class Consultation extends Record{
 	private Doctor doctor;

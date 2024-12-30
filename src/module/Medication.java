@@ -15,7 +15,7 @@ public class Medication {
 		return medicationName;
 	}
 
-	public void setName(String name) {
+	public void setMedicationName(String medicationName) {
 		this.medicationName = medicationName;
 	}
 

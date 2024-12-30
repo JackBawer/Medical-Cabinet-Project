@@ -10,7 +10,6 @@ public class Appointment extends Record{
 	public Appointment(LocalDateTime dateTime, Patient patient, Secretary secretary, String status) {
 		super(dateTime, patient);
 		this.secretary = secretary;
-		this.doctor = doctor;
 		this.status = status;
 	}
 	

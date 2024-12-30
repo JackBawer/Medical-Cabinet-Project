@@ -3,7 +3,6 @@ package module;
 import java.time.LocalDateTime;
 
 import java.util.List;
-import java.util.ArrayList;
 
 public class MedicalRecord extends Record{
 	private List<Consultation> consultations;
@@ -20,6 +19,7 @@ public class MedicalRecord extends Record{
 	public void setConsultations(List<Consultation> consultations) {
 		this.consultations = consultations;
 	}
+
 	@Override
 	public String getRecordDetails() {
 		return "MedicalRecord{" +

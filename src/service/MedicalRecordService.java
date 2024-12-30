@@ -43,4 +43,15 @@ public class MedicalRecordService {
         }
         System.out.println("No medical record found for patient with ID: " + medicalRecord.getPatient().getId());
     }
+
+    public void deleteRecord(String ID) {
+        for (MedicalRecord record : medicalRecords) {
+            if (record.getPatient().getId() == ID) {
+                medicalRecords.remove(record);
+                System.out.println("Medical record deleted successfully");
+                return;
+            }
+        }
+        System.out.println("No medical record found for patient with ID: " + ID);
+    }
 }
