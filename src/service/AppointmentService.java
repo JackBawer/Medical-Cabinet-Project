@@ -73,4 +73,16 @@ public class AppointmentService {
         }
         return patientAppointments;
     }
+
+    // New method to fetch scheduled appointment by patient ID and doctor ID
+    public Appointment getScheduledAppointmentByPatient(String patientId, String doctorId) {
+        for (Appointment appointment : appointments) {
+            if (appointment.getPatient().getId().equals(patientId) &&
+                    appointment.getDoctor().getDoctorId().equals(doctorId) &&
+                    "Scheduled".equalsIgnoreCase(appointment.getStatus())) {
+                return appointment;
+            }
+        }
+        return null;
+    }
 }

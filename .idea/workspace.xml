@@ -5,10 +5,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c9cddbde-0253-4a83-b254-66e9b3d532ac" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.~lock.report.odt#" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report.odt" beforeDir="false" afterPath="$PROJECT_DIR$/report.odt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/userInterface/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/userInterface/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/medicalCabinet/module/Appointment.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/medicalCabinet/module/Consultation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/medicalCabinet/module/Doctor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/medicalCabinet/module/MedicalCertificate.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/medicalCabinet/module/MedicalHistory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/medicalCabinet/module/MedicalRecord.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/medicalCabinet/module/Medication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/medicalCabinet/module/Observation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/medicalCabinet/module/Patient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/medicalCabinet/module/PatientFile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/medicalCabinet/module/Prescription.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/medicalCabinet/module/Record.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/medicalCabinet/module/Secretary.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/medicalCabinet/module/Summary.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/medicalCabinet/module/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/medicalCabinet/service/AppointmentService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/medicalCabinet/service/MedicalRecordService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/medicalCabinet/service/PatientFileService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/medicalCabinet/userInterface/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/medicalCabinet/userInterface/UI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/module/Consultation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/module/Consultation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/module/MedicalCertificate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/module/MedicalCertificate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/module/MedicalRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/module/MedicalRecord.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/module/PatientFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/module/PatientFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/module/Prescription.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/module/Prescription.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/AppointmentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/AppointmentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/MedicalRecordService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/MedicalRecordService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/userInterface/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/userInterface/UI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +49,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -61,15 +92,15 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "mo7",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "SDKs",
-    "project.structure.proportion": "0.0",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.lookFeel",
     "vue.rearranger.settings.migration": "true"
@@ -105,6 +136,7 @@
       <workItem from="1736507245615" duration="10786000" />
       <workItem from="1736524824930" duration="972000" />
       <workItem from="1736529123067" duration="5326000" />
+      <workItem from="1736590102544" duration="7194000" />
     </task>
     <servers />
   </component>

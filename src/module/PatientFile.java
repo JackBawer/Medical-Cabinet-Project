@@ -27,4 +27,12 @@ public class PatientFile {
 	public List<Summary> getSummaries() {
 		return summaries;
 	}
+	@Override
+	public String toString() {
+		return "PatientFile{" +
+				"patient=" + patient.getDetails() +
+				", medicalHistory=" + medicalHistory +
+				", summaries=" + summaries +
+				'}';
+	}
 }
