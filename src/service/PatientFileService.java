@@ -1,43 +1,65 @@
 package service;
 
 import module.PatientFile;
-import module.Patient;
-
 import java.util.ArrayList;
 import java.util.List;
 
-public class PatientFileService  {
-	
-	private List<PatientFile> patientFiles;
-	
-	public PatientFileService(List<PatientFile> patientFiles) {
-		this.patientFiles = new ArrayList<>();
-	}
-	
-	public List<PatientFile> getPatientFiles() {
-		return patientFiles;
-	}
+public class PatientFileService {
+    private List<PatientFile> patientFiles;
 
-	public void setPatientFiles(List<PatientFile> patientFiles) {
-		this.patientFiles = patientFiles;
-	}
+    // Constructor that initializes the patientFiles list based on the passed argument
+    public PatientFileService(List<PatientFile> patientFiles) {
+        if (patientFiles == null) {
+            this.patientFiles = new ArrayList<>();
+        } else {
+            this.patientFiles = patientFiles;
+        }
+    }
 
-	void addPatient(Patient patient) {
-		return;
-	}
-	
-	void updatePatientInfo(Patient patient) {
-		return;
-	}
-	
-	void getPatientInfo(String lastName, String firstName) {
-		return;
-	}
-	void getPatientHistory(Patient patient) {
-		return;
-	}
-	
-	public String toString() {
-		return "This will be so long.";
-	}
- }
+    // Get all patient files
+    public List<PatientFile> getPatientFiles() {
+        return this.patientFiles;
+    }
+
+    // Set a new list of patient files
+    public void setPatientFiles(List<PatientFile> patientFiles) {
+        this.patientFiles = patientFiles;
+    }
+
+    // Add a new patient file to the list
+    public void addPatientFile(PatientFile patientFile) {
+        this.patientFiles.add(patientFile);
+    }
+
+    // Get a patient file by their ID
+    public PatientFile getPatientFile(String ID) {
+        if (ID == null || ID.isEmpty()) {
+            System.out.println("Invalid ID provided.");
+            return null;
+        }
+
+        for (PatientFile file : this.patientFiles) {
+            if (file.getPatient().getId().equals(ID)) {
+                return file;
+            }
+        }
+        System.out.println("No patient file found for patient with ID: " + ID);
+        return null;
+    }
+
+    // Update an existing patient file
+    public void updatePatientFile(PatientFile patientFile) {
+        if (patientFile == null || patientFile.getPatient() == null) {
+            System.out.println("Invalid patient file.");
+            return;
+        }
+
+        for (int i = 0; i < this.patientFiles.size(); i++) {
+            if (this.patientFiles.get(i).getPatient().getId().equals(patientFile.getPatient().getId())) {
+                this.patientFiles.set(i, patientFile); // Update the patient file in the list
+                return;
+            }
+        }
+        System.out.println("No patient file found for patient with ID: " + patientFile.getPatient().getId());
+    }
+}
