@@ -13,13 +13,15 @@ public class UI {
     private MedicalRecordService medicalRecordService;
     private PatientFileService patientFileService;
     private AppointmentService appointmentService;
+    private DoctorService doctorService;  // Add DoctorService as a field
 
     public UI(Scanner scanner, MedicalRecordService medicalRecordService,
-              PatientFileService patientFileService, AppointmentService appointmentService) {
+              PatientFileService patientFileService, AppointmentService appointmentService, DoctorService doctorService) {
         this.scanner = scanner;
         this.medicalRecordService = medicalRecordService;
         this.patientFileService = patientFileService;
         this.appointmentService = appointmentService;
+        this.doctorService = doctorService;  // Initialize the DoctorService
     }
 
     public void start() {
@@ -57,12 +59,12 @@ public class UI {
         while (true) {
             System.out.println("Options:");
             System.out.println("""
-        1. View your appointments
-        2. Conduct consultation
-        3. View all medical records
-        4. View all patient files
-        5. Exit
-        """);
+    1. View your appointments
+    2. Conduct consultation
+    3. View a medical record
+    4. View a patient file
+    5. Exit
+    """);
             int choice = Integer.parseInt(scanner.nextLine());
 
             switch (choice) {
@@ -86,6 +88,13 @@ public class UI {
                     Appointment appointment = appointmentService.getScheduledAppointmentByPatient(patientId, doctorId);
                     if (appointment == null) {
                         System.out.println("You do not have a scheduled appointment with this patient.");
+                        return;
+                    }
+
+                    // Fetch the actual doctor's details from the appointment
+                    Doctor doctor = doctorService.getDoctorById(doctorId);
+                    if (doctor == null) {
+                        System.out.println("Doctor not found with ID: " + doctorId);
                         return;
                     }
 
@@ -154,7 +163,6 @@ public class UI {
                     System.out.println("Do you want a medical certificate? (yes/no)");
                     String certificateRequest = scanner.nextLine();
                     MedicalCertificate medicalCertificate = null;
-                    Doctor doctor = new Doctor(doctorId, "Sou", "Me", "General"); // Fetch the actual doctor's details
                     if ("yes".equalsIgnoreCase(certificateRequest)) {
                         System.out.println("Enter the number of days for rest:");
                         int restDays = Integer.parseInt(scanner.nextLine());
@@ -199,19 +207,29 @@ public class UI {
                     System.out.println("Consultation recorded successfully.");
                 }
                 case 3 -> {
-                    List<MedicalRecord> medicalRecords = medicalRecordService.getMedicalRecords();
-                    for (MedicalRecord record : medicalRecords) {
-                        System.out.println(record.getRecordDetails());
+                    System.out.println("Enter patient ID:");
+                    String patientId = scanner.nextLine();
+                    MedicalRecord medicalRecord = medicalRecordService.getMedicalRecord(patientId);
+                    if (medicalRecord == null) {
+                        System.out.println("No medical record found for patient ID: " + patientId);
+                    } else {
+                        System.out.println(medicalRecord.getRecordDetails());
                         System.out.println("Do you want to view detailed consultations for this record? (yes/no)");
                         String viewDetails = scanner.nextLine();
                         if ("yes".equalsIgnoreCase(viewDetails)) {
-                            System.out.println(record.getDetailedRecord());
+                            System.out.println(medicalRecord.getDetailedRecord());
                         }
                     }
                 }
                 case 4 -> {
-                    List<PatientFile> patientFiles = patientFileService.getPatientFiles();
-                    patientFiles.forEach(file -> System.out.println(file.toString()));
+                    System.out.println("Enter patient ID:");
+                    String patientId = scanner.nextLine();
+                    PatientFile patientFile = patientFileService.getPatientFile(patientId);
+                    if (patientFile == null) {
+                        System.out.println("No patient file found for patient ID: " + patientId);
+                    } else {
+                        System.out.println(patientFile.toString());
+                    }
                 }
                 case 5 -> {
                     System.out.println("Returning to main menu...");
@@ -225,13 +243,30 @@ public class UI {
     private void handleSecretary() {
         System.out.println("Welcome, Secretary!");
         System.out.println("Options:");
-        System.out.println("1. Schedule an appointment");
-        System.out.println("2. View patient files");
-        System.out.println("3. Exit");
+        System.out.println("1. Add a new doctor");
+        System.out.println("2. Schedule an appointment");
+        System.out.println("3. View patient files");
+        System.out.println("4. Exit");
         int choice = Integer.parseInt(scanner.nextLine());
 
         switch (choice) {
             case 1 -> {
+                // Add a new doctor
+                System.out.println("Enter doctor's ID:");
+                String doctorId = scanner.nextLine();
+                System.out.println("Enter doctor's first name:");
+                String doctorFirstName = scanner.nextLine();
+                System.out.println("Enter doctor's last name:");
+                String doctorLastName = scanner.nextLine();
+                System.out.println("Enter doctor's specialization:");
+                String doctorSpecialization = scanner.nextLine();
+
+                Doctor doctor = new Doctor(doctorId, doctorFirstName, doctorLastName, doctorSpecialization);
+                doctorService.addDoctor(doctor);
+                System.out.println("Doctor added successfully!");
+            }
+            case 2 -> {
+                // Schedule an appointment
                 System.out.println("Enter patient ID:");
                 String patientId = scanner.nextLine();
                 System.out.println("Enter patient's first name:");
@@ -248,16 +283,16 @@ public class UI {
                 // Add doctor's details
                 System.out.println("Enter doctor's ID:");
                 String doctorId = scanner.nextLine();
-                System.out.println("Enter doctor's first name:");
-                String doctorFirstName = scanner.nextLine();
-                System.out.println("Enter doctor's last name:");
-                String doctorLastName = scanner.nextLine();
-                System.out.println("Enter doctor's specialization:");
-                String doctorSpecialization = scanner.nextLine();
+
+                // Fetch the doctor by ID
+                Doctor doctor = doctorService.getDoctorById(doctorId);
+                if (doctor == null) {
+                    System.out.println("Doctor not found with ID: " + doctorId);
+                    return;
+                }
 
                 // Create patient and doctor objects
                 Patient patient = new Patient(patientId, firstName, lastName, phone);
-                Doctor doctor = new Doctor(doctorId, doctorFirstName, doctorLastName, doctorSpecialization);
 
                 // Create patient file and add it to the patient file service
                 List<MedicalHistory> medicalHistories = new ArrayList<>();
@@ -273,7 +308,8 @@ public class UI {
                 appointmentService.addAppointment(appointment);
                 System.out.println("Appointment scheduled successfully!");
             }
-            case 2 -> {
+            case 3 -> {
+                // View patient files
                 System.out.println("Enter patient ID:");
                 String patientId = scanner.nextLine();
                 PatientFile file = patientFileService.getPatientFile(patientId);
@@ -283,7 +319,7 @@ public class UI {
                     System.out.println(file.toString());
                 }
             }
-            case 3 -> System.out.println("Returning to main menu...");
+            case 4 -> System.out.println("Returning to main menu...");
             default -> System.out.println("Invalid option.");
         }
     }
@@ -297,8 +333,7 @@ public class UI {
         2. View appointments
         3. View medical record
         4. View patient file
-        5. View detailed medical record
-        6. Exit
+        5. Exit
         """);
 
             int choice = Integer.parseInt(scanner.nextLine());
@@ -347,23 +382,13 @@ public class UI {
                     String patientId = scanner.nextLine();
                     PatientFile patientFile = patientFileService.getPatientFile(patientId);
                     if (patientFile == null) {
-                        System.out.println("No patient file found for patient with ID: " + patientId);
+                        System.out.println("No patient file found for patient ID: " + patientId);
                     } else {
                         System.out.println("Patient File Details:");
                         System.out.println(patientFile.toString());
                     }
                 }
                 case 5 -> {
-                    System.out.println("Enter your patient ID to view detailed medical record:");
-                    String patientId = scanner.nextLine();
-                    MedicalRecord medicalRecord = medicalRecordService.getMedicalRecord(patientId);
-                    if (medicalRecord == null) {
-                        System.out.println("No medical record found for patient with ID: " + patientId);
-                    } else {
-                        System.out.println(medicalRecord.getDetailedRecord());
-                    }
-                }
-                case 6 -> {
                     System.out.println("Returning to main menu...");
                     return;
                 }

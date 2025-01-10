@@ -5,35 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c9cddbde-0253-4a83-b254-66e9b3d532ac" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/service/DoctorService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/medicalCabinet/module/Appointment.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/medicalCabinet/module/Consultation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/medicalCabinet/module/Doctor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/medicalCabinet/module/MedicalCertificate.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/medicalCabinet/module/MedicalHistory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/medicalCabinet/module/MedicalRecord.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/medicalCabinet/module/Medication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/medicalCabinet/module/Observation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/medicalCabinet/module/Patient.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/medicalCabinet/module/PatientFile.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/medicalCabinet/module/Prescription.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/medicalCabinet/module/Record.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/medicalCabinet/module/Secretary.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/medicalCabinet/module/Summary.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/medicalCabinet/module/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/medicalCabinet/service/AppointmentService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/medicalCabinet/service/MedicalRecordService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/medicalCabinet/service/PatientFileService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/medicalCabinet/userInterface/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/medicalCabinet/userInterface/UI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/module/Consultation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/module/Consultation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/module/MedicalCertificate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/module/MedicalCertificate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/module/MedicalRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/module/MedicalRecord.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/module/PatientFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/module/PatientFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/module/Prescription.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/module/Prescription.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/AppointmentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/AppointmentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/MedicalRecordService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/MedicalRecordService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/medicalCabinet/userInterface/UI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/medicalCabinet/userInterface/UI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/userInterface/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/userInterface/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/userInterface/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/userInterface/UI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -85,27 +60,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Application.Main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "mo7",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -136,11 +111,24 @@
       <workItem from="1736507245615" duration="10786000" />
       <workItem from="1736524824930" duration="972000" />
       <workItem from="1736529123067" duration="5326000" />
-      <workItem from="1736590102544" duration="7194000" />
+      <workItem from="1736590102544" duration="8312000" />
+      <workItem from="1736676240149" duration="4079000" />
+      <workItem from="1736701704356" duration="1096000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

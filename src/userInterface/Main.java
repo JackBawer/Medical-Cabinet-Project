@@ -17,8 +17,9 @@ public class Main {
 		MedicalRecordService medicalRecordService = new MedicalRecordService(medicalRecords);
 		PatientFileService patientFileService = new PatientFileService(patientFiles);
 		AppointmentService appointmentService = new AppointmentService();
+		DoctorService doctorService = new DoctorService();
 
-		UI ui = new UI(scanner, medicalRecordService, patientFileService, appointmentService);
+		UI ui = new UI(scanner, medicalRecordService, patientFileService, appointmentService, doctorService);
 		ui.start();
 	}
 }
