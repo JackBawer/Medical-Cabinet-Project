@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9cddbde-0253-4a83-b254-66e9b3d532ac" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/userInterface/UI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/medicalCabinet/service/MedicalRecordService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/medicalCabinet/service/MedicalRecordService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/module/Doctor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/module/Doctor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/module/MedicalRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/module/MedicalRecord.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/module/PatientFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/module/PatientFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/AppointmentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/AppointmentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/PatientFileService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/PatientFileService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/userInterface/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/userInterface/Main.java" afterDir="false" />
-    </list>
+    <list default="true" id="c9cddbde-0253-4a83-b254-66e9b3d532ac" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -106,7 +97,7 @@
       <workItem from="1736202571833" duration="43000" />
       <workItem from="1736202641624" duration="344000" />
       <workItem from="1736496992628" duration="1309000" />
-      <workItem from="1736507245615" duration="10324000" />
+      <workItem from="1736507245615" duration="10786000" />
     </task>
     <servers />
   </component>
