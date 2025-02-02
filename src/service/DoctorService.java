@@ -12,6 +12,10 @@ public class DoctorService {
     }
 
     public void addDoctor(Doctor doctor) {
+        if (doctors.containsKey(doctor.getDoctorId())) {
+            System.out.println("Doctor with ID " + doctor.getDoctorId() + " already exists.");
+            return;
+        }
         doctors.put(doctor.getDoctorId(), doctor);
     }
 

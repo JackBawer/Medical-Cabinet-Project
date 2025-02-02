@@ -28,6 +28,12 @@ public class PatientFileService {
 
     // Add a new patient file to the list
     public void addPatientFile(PatientFile patientFile) {
+        for (PatientFile file : patientFiles) {
+            if (file.getPatient().getId().equals(patientFile.getPatient().getId())) {
+                System.out.println("Patient with ID " + patientFile.getPatient().getId() + " already exists.");
+                return;
+            }
+        }
         this.patientFiles.add(patientFile);
     }
 

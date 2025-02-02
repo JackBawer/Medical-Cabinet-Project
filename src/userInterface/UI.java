@@ -8,6 +8,8 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.ArrayList;
 
+import java.time.format.DateTimeParseException;
+
 public class UI {
     private Scanner scanner;
     private MedicalRecordService medicalRecordService;
@@ -292,6 +294,13 @@ public class UI {
                 // Add a new doctor
                 System.out.println("Enter doctor's ID:");
                 String doctorId = scanner.nextLine();
+
+                // Check if the doctor ID already exists
+                if (doctorService.getDoctorById(doctorId) != null) {
+                    System.out.println("Doctor with ID " + doctorId + " already exists.");
+                    return;
+                }
+
                 System.out.println("Enter doctor's first name:");
                 String doctorFirstName = scanner.nextLine();
                 System.out.println("Enter doctor's last name:");
@@ -334,8 +343,16 @@ public class UI {
                     patient = patientFile.getPatient();
                 }
 
-                System.out.println("Enter appointment date and time (yyyy-MM-ddTHH:mm):");
-                LocalDateTime dateTime = LocalDateTime.parse(scanner.nextLine());
+                LocalDateTime dateTime = null;
+                while (dateTime == null) {
+                    System.out.println("Enter appointment date and time (yyyy-MM-ddTHH:mm):");
+                    String dateTimeInput = scanner.nextLine();
+                    try {
+                        dateTime = LocalDateTime.parse(dateTimeInput);
+                    } catch (DateTimeParseException e) {
+                        System.out.println("Invalid date and time format. Please enter the date and time in the format yyyy-MM-ddTHH:mm.");
+                    }
+                }
 
                 // Add doctor's details
                 System.out.println("Enter doctor's ID:");
